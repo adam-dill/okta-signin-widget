@@ -75,7 +75,7 @@ test.requestHooks(logger, mock)('should call settings.registration hooks onFailu
   logger.clear();
   const registrationPage = await setup(t);
 
-  await rerenderWidget({
+  await renderWidget({
     registration: {
       parseSchema: function(resp, onSuccess, onFailure) {
         const error = {
@@ -114,7 +114,7 @@ test.requestHooks(logger, mock)('should call settings.registration.postSubmit ho
   logger.clear();
   const registrationPage = await setup(t);
 
-  await rerenderWidget({
+  await renderWidget({
     registration: {
       postSubmit: function(postData, onSuccess, onFailure) {
         const error = {
