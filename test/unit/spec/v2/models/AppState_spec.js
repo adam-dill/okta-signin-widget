@@ -1,5 +1,5 @@
 import AppState from 'v2/models/AppState';
-import {FORMS, FORMS_FOR_VERIFICATION, FORMS_WITHOUT_SIGNOUT} from 'v2/ion/RemediationConstants';
+import { FORMS_FOR_VERIFICATION } from 'v2/ion/RemediationConstants';
 
 describe('v2/models/AppState', function() {
   beforeEach(() => {
