@@ -8661,8 +8661,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
             value: function defaultTarget(trigger) {
                 var selector = getAttributeValue('target', trigger);
 
-                if (selector) {
+                if (selector && typeof(selector) === 'string') {
                     return document.querySelector(selector);
+                } else if (selector && selector instanceof Element) {
+                    return selector;
                 }
             }
         }, {
